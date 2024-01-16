@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Background Removal Result</title>
+</head>
+<body>
+    <h1>Image Background Removal Result</h1>
+    {% for image in processed_images %}
+        <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+            <div>
+                <p>Original Image</p>
+                <img src="{{ image.original }}" alt="Original Image" style="max-width: 400px;">
+            </div>
+            <div>
+                <p>Processed Image</p>
+                <img src="{{ image.processed }}" alt="Processed Image" style="max-width: 400px;">
+            </div>
+        </div>
+    {% endfor %}
+</body>
+</html>
